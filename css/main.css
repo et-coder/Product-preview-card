@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.hero-img {
+    background-image: url("../images/image-product-mobile.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 15rem;
+    border-radius: 10px 10px 0 0;
+}
+
+.description {
+    padding: 1em 1em 1.5em 1.3em;
+}
+
+.meta-data {
+    font-size: 0.7rem;
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0.4em 0 0.5em;
+    font-family: "Fraunces", sans-serif;
+    line-height: 1;
+    color: hsl(212, 21%, 14%);
+}
+
+.body {
+    font-size: 0.8rem;
+    font-family: "Montserrat", sans-serif;
+    color: hsl(228, 12%, 48%);
+    line-height: 1.5;
+}
+
+.price {
+    position: relative;
+    margin: 1em 0;
+}
+
+.current-price {
+    display: inline-block;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: hsl(158, 36%, 37%);
+    font-family: "Fraunces", sans-serif;
+}
+
+.previous-price {
+    position: absolute;
+    display: inline-block;
+    font-size: 0.9rem;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    margin-left: 0.8em;
+    top: 50%;
+    transform: translate(0, -50%);
+
+}
+
+button {
+    width: 100%;
+    padding: 1em;
+    border: none;
+    border-radius: 10px;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    position: relative;
+    font-weight: 700;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: hsl(158, 36%, 20%);
+}
+
+button img {
+    margin-right: 0.7em;
+    vertical-align: middle;
+    width: 13px;
+}
+
+@media only screen and (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+        width: 520px;
+    }
+
+    .hero-img {
+        flex: 50%;
+        height: auto;
+        background-image: url("../images/image-product-desktop.jpg");
+        background-size: cover;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .description {
+        padding: 2em 1.5em;
+        flex: 50%;
+    }
+}
